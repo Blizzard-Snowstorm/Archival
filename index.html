@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultra Secret Video</title>
@@ -20,12 +21,20 @@
         }
     </style>
 </head>
-<body>
+<body onload="warning()">
 
-    <video controls="" playsinline="">
+    <video id="secretVideo" controls playsinline>
         <source src="https://raw.githubusercontent.com/Blizzard-Snowstorm/iLoveRickrolling/main/Ultra%20secret%20video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
+    <script>
+        function warning() {
+            alert("Warning: Classified content ahead. Press OK to continue.");
+            const video = document.getElementById("secretVideo");
+            video.play();
+        }
+    </script>
 
-</body></html>
+</body>
+</html>
